@@ -36,6 +36,13 @@ app.get('/api/persons', (req, res) => {
   res.json(persons)
 })
 
+/* PHONEBOOK INFO RESORCE */
+app.get('/info', (req, res) => { 
+  res.send(`
+  Phonebook has info for ${persons.length} persons </br>
+  ${new Date()}`)
+})
+
 /* FETCH A RESORCE */
 
 /* CREATE A RESORCE */
