@@ -44,6 +44,11 @@ app.get('/info', (req, res) => {
 })
 
 /* FETCH A RESORCE */
+app.get('/api/persons/:id', (req, res) => {
+  const id = Number(req.params.id)
+  const person = persons.find((person) => person.id === id)
+  !id ? res.status(404).end() : res.json(person)
+})
 
 /* CREATE A RESORCE */
 
